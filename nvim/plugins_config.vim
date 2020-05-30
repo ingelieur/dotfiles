@@ -19,6 +19,11 @@ nmap <Leader>nt :NERDTree<cr>
 
 " =========== fugitive ===========
 set diffopt+=vertical
+"git status
+nmap <leader>gs :G<CR>
+"solving gitdiff
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gj :diffget //3<CR>
 
 " ========== indentLine ==========
 " let g:indentLine_char = '┆'

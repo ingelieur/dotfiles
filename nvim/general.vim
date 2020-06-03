@@ -111,11 +111,12 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" Two spaces tabs for javascript files
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2
-autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+" Set tab spaces for certain file types or folder
+" autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+" autocmd FileType css setlocal shiftwidth=2 tabstop=2
+" autocmd FileType ejs setlocal shiftwidth=2 tabstop=2 expandtab
+" autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd Filetype proto setlocal shiftwidth=4 tabstop=4 expandtab
 
 " Natural splitting
 set splitbelow

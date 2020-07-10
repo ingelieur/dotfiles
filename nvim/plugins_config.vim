@@ -50,7 +50,8 @@ let g:ale_linters = {
       \ 'javascript': ['eslint', 'prettier'],
       \ 'jsx': ['eslint','stylelint'],
       \ 'typescript': ['eslint', 'prettier', 'tslint'],
-      \ 'reason': ['reason-language-server']
+      \ 'reason': ['reason-language-server'],
+      \ 'go': ['gopls']
 \ }
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript'], 'typescriptreact': 'typescript'}
 let g:ale_fixers = {
@@ -79,6 +80,8 @@ nmap <Leader>F :GFiles<cr>
 nmap <Leader>a :Rg<cr>
 nmap <Leader>li :Lines<cr>
 nmap <Leader>lo :BLines<cr>
+" floating fzf window
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " Use rg over grep
 if executable('rg')
@@ -86,8 +89,8 @@ if executable('rg')
 endif
 
 " https://robots.thoughtbot.com/faster-grepping-in-vim
-" bind K to grep word under cursor
-" nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>"
+" bind <leader>aw to grep word under cursor
+nnoremap <Leader>aw :Rg <C-R>=expand("<cword>")<CR><CR>
 
 " let g:rg_command = '
 "   \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"
@@ -148,6 +151,27 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Highlight symbol under cursor on CursorHold
 " autocmd CursorHold * silent call CocActionAsync('highlight')
+"
+" Remap for format selected region
+vmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format-selected)
+
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " ========== vim-airline ==========
 set laststatus=2

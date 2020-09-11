@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " junegunn/fzf.vim (Things you can do with fzf and Vim.)
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " ale (Asynchronous Lint Engine)
@@ -12,6 +12,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " vim-go (Go development plugin for Vim)
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sebdah/vim-delve'
+
+" vim-slumlord (Inline previews for Plantuml sequence diagrams. OMG!)
+" Plug 'scrooloose/vim-slumlord'
+
+" plantuml-previewer.vim (Vim / Neovim plugin for preview PlantUML)
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
 
 " vim-polyglot (A collection of language packs for Vim.)
 Plug 'sheerun/vim-polyglot'
@@ -24,6 +32,9 @@ Plug 'tpope/vim-fugitive'
 
 " nerdtree (A tree explorer plugin for vim.)
 Plug 'scrooloose/nerdtree'
+
+" defx.nvim (The dark powered file explorer implementation)
+" Plug 'Shougo/defx.nvim'
 
 " nerdtree-git-plugin (A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.)
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -39,6 +50,9 @@ Plug 'preservim/nerdcommenter'
 
 " Yggdroot/indentLine (Displaying thin vertical lines at each indentation level for code indented with spaces.)
 Plug 'Yggdroot/indentLine'
+
+" Searchlight = Search + Highlight
+" Plug 'PeterRincker/vim-searchlight'
 
 " Themes
 Plug 'haishanh/night-owl.vim'

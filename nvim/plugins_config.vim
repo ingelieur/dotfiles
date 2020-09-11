@@ -35,13 +35,20 @@ let g:go_def_mapping_enabled = 0
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 let g:go_fmt_fail_silently = 1 " Let neomake show errors instead
-let g:go_highlight_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+" let g:go_auto_sameids = 1
 
 " ========== ale ==========
 let g:ale_sign_warning = '▲'
@@ -53,13 +60,26 @@ let g:ale_linters = {
       \ 'reason': ['reason-language-server'],
       \ 'go': ['gopls']
 \ }
+" let g:ale_linters = {
+"       \ 'javascript': ['eslint'],
+"       \ 'jsx': ['eslint','stylelint'],
+"       \ 'typescript': ['eslint', 'tslint'],
+"       \ 'reason': ['reason-language-server'],
+"       \ 'go': ['gopls']
+" \ }
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript'], 'typescriptreact': 'typescript'}
 let g:ale_fixers = {
-      \ 'javascript': ['prettier', 'eslint'],
-      \ 'typescript': ['prettier', 'tslint'],
-      \ 'typescriptreact': ['prettier', 'tslint'],
+      \ 'javascript': ['eslint', 'prettier'],
+      \ 'typescript': ['tslint', 'prettier'],
+      \ 'typescriptreact': ['tslint', 'prettier'],
       \ 'reason': ['refmt']
 \}
+" let g:ale_fixers = {
+"       \ 'javascript': ['eslint'],
+"       \ 'typescript': ['tslint'],
+"       \ 'typescriptreact': ['tslint'],
+"       \ 'reason': ['refmt']
+" \}
 let g:ale_list_window_size = 5
 let g:ale_set_highlights = 0
 let g:ale_reason_ls_executable='/home/dev/reason-language-server'

@@ -83,5 +83,9 @@ sudo dhclient -r
 echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
 ```
 
+### Too many open files
+```
+ulimit -S -n 2048
+```
 ## To Do
 * Create a bash script to install all

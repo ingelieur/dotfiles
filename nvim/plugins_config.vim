@@ -48,7 +48,12 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
 " let g:go_auto_sameids = 1
+let g:go_fmt_experimental = 1
+
+" ========== vim-delve ==========
+" let g:delve_backend = "native"
 
 " ========== ale ==========
 let g:ale_sign_warning = '▲'

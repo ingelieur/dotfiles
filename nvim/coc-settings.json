@@ -3,6 +3,7 @@
   "diagnostic.displayByAle": false,
   "diagnostic.messageTarget": "float",
   "diagnostic.virtualText": false,
+  "codeLens.enable": true,
   "languageserver": {
     "reason": {
       "command": "/Users/dev/reason-language-server",

@@ -1,3 +1,6 @@
+# changing ulimit. Source: https://fantashit.com/building-on-macos-big-sur/
+ulimit -S -n 4096
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -39,9 +42,9 @@ alias nst="npm start"
 alias nrw="npm run watch"
 alias vim="nvim"
 alias rst="realize start"
-# tree, but respecting gitignore || https://www.hardscrabble.net/2019/tree-but-respecting-your-gitignore/
-alias trww = rg --hidden --files | tree --fromfile
-unalias mysql
+#alias go1.15="go"
+#alias go="go1.16beta1"
+# unalias mysql
 
 # Functions
 function mkdcd {
@@ -50,3 +53,15 @@ function mkdcd {
 function note {
   vim ~/Desktop/meeting_notes/meeting_notes.md
 }
+function rtu {
+  cd /Users/dev/go/src/gitlab.com/ruangguru/source && tmux
+}
+function rgu {
+  cd /Users/dev/go/src/gitlab.com/ruangguru/source
+}
+
+export YVM_DIR=/Users/dev/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# opam configuration
+test -r /Users/dev/.opam/opam-init/init.zsh && . /Users/dev/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

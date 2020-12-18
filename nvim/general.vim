@@ -122,6 +122,9 @@ autocmd Filetype proto setlocal shiftwidth=4 tabstop=4 expandtab
 set splitbelow
 set splitright
 
+" folding
+set foldmethod=indent
+
 " Specify the behavior when switching between buffers
 try
     set switchbuf=useopen,usetab,newtab

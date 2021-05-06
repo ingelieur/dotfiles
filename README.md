@@ -2,19 +2,17 @@
 A collection of my dotfiles.
 
 ## OS
-* Manjaro 18.1.0 (KDE)
-* WSL2 (Ubuntu)
+* Mac OS (Catalina and Big Sur)
 
 ## Terminal
-Konsole, wsltty, and iterm2 with [nord](https://www.nordtheme.com/ports) theme.
+iterm2 with custom profile
 
 ## Font
 [Space Mono](https://github.com/googlefonts/spacemono)
 
 ## Languages
-* node.js (Mainly use it for backend stuff and React in the frontend)
-* go (For fun)
-* ReasonML (Currently playing with it)
+* node.js (Mainly for fun now)
+* go (For work)
 
 ## Shell
 zsh with zprezto
@@ -50,7 +48,7 @@ With this config, I installed several [coc extensions](https://github.com/neocli
 > Since I'm currently using neovim, so the available .vimrc doesn't represent my setup anymore. Yet, it's still valid and very much functioning. I'm keeping it here, in case someone wants to have a look at it (or for when I change back to vim in the future)
 
 ## .tmux-conf
-tmux v3.0a
+tmux v3.2
 Functions:
 * remap prefix from 'C-b' to 'C-a'
 * vi mode copy paste
@@ -74,6 +72,12 @@ Currently using [n](https://github.com/tj/n)
 - Add xmodmap.sh to startup application (if remap keys is needed)
 
 ## Troubleshoot
+### Can't have autocomplete for fzf [source](https://betterprogramming.pub/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d)
+```
+$(brew --prefix)/opt/fzf/install
+```
+> This will generate a file for bash and zsh (and source it in your .bashrc or .zshrc file) that includes three key bindings and the fuzzy completion alias.
+
 ### Can't login to wifi with captive portal [source](https://blog.ham1.co.uk/2016/02/06/cannot-sign-in-using-hotel-wifi-on-linux-ubuntu-mint/)
 ```
 sudo dhclient -r
